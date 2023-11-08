@@ -4,7 +4,7 @@ schema:
 dataSources:
   - kind: ethereum
     name: NFTItem
-    network: mainnet
+    network: testnet
     source:
       address: "0xb49054664518BAC9330295Fc66ED5726eaFCDB15"
       abi: URC721
