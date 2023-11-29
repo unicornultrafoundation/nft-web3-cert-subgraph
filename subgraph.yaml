@@ -7,7 +7,7 @@ dataSources:
     network: testnet
     source:
       address: "0xb49054664518BAC9330295Fc66ED5726eaFCDB15"
-      abi: URC721
+      abi: URC4906
       startBlock: 10366716
     mapping:
       kind: ethereum/events
@@ -19,7 +19,11 @@ dataSources:
       abis:
         - name: URC721
           file: ./abis/URC721.json
+        - name: URC4906
+          file: ./abis/URC4906.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
-      file: ./src/transfer.ts
+        - event: MetadataUpdate(uint256)
+          handler: handleUpdateMetadata
+      file: ./src/event.ts

@@ -5,6 +5,12 @@ type Item @entity {
   owner: User!
 }
 
+type MetadataUpdateRecord @entity {
+  id: ID!
+  tokenID: BigInt!
+  actor: User!
+}
+
 type User @entity {
   id: ID!
   items: [Item!]! @derivedFrom(field: "owner")

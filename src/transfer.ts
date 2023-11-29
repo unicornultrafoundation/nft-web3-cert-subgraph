@@ -1,8 +1,9 @@
 import {Item, User} from "../generated/schema";
-import {Transfer, URC721} from "../generated/NFTItem/URC721";
+import {URC721} from "../generated/NFTItem/URC721";
+import {Transfer} from "../generated/NFTItem/URC4906";
 import {ContractAddress} from "./const";
 
-export function handleTransfer(event: Transfer): void {
+export function tokenTransfer(event: Transfer): void {
   /* load the token from the existing Graph Node */
 
   let token = Item.load(event.params.tokenId.toString())
