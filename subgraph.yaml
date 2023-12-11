@@ -6,9 +6,9 @@ dataSources:
     name: NFTItem
     network: testnet
     source:
-      address: "0xD66B26c743fc57985559DE7D1A85220190B4bbBd"
+      address: "0x34AdaCBbb61AB0345094fFdFe2a6a737530BF155"
       abi: URC4906
-      startBlock: 11915763
+      startBlock: 12638191
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
