@@ -1,12 +1,12 @@
 {
-  "name": "u2u-solar_adventure-subgraph",
+  "name": "u2u-web3-cert-subgraph",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "create-local": "graph create --node http://localhost:8020/ u2u/solar_adventure",
-    "remove-local": "graph remove --node http://localhost:8020/ u2u/solar_adventure",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 u2u/solar_adventure",
+    "create-local": "graph create --node http://localhost:8020/ u2u/web3_cert",
+    "remove-local": "graph remove --node http://localhost:8020/ u2u/web3_cert",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 u2u/web3_cert",
     "test": "graph test"
   },
   "dependencies": {
