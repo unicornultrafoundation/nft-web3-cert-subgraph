@@ -20,14 +20,23 @@ export function tokenTransfer(event: Transfer): void {
     }
   }
 
-  token.owner = event.params.to.toHexString()
-  token.save()
+
 
   let user = User.load(event.params.to.toHexString())
   if (!user) {
     user = new User(event.params.to.toHexString())
     user.save()
   }
+
+  let actor = User.load(event.params.from.toHexString())
+  if (!actor) {
+    actor = new User(event.params.from.toHexString())
+    actor.save()
+  }
+
+  token.owner = event.params.to.toHexString()
+  token.save()
+
 
   // Store transfer as history
   let transferHistoryID = event.transaction.hash.toHexString().concat("-" + event.transactionLogIndex.toString())
